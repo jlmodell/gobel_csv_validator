@@ -205,15 +205,6 @@ const config: ValidatorConfig = {
   isHeaderNameOptional: false,
 };
 
-// fs.readFile("./tests/TS202211.CSV", (err, data) => {
-//   if (err) {
-//     console.error(err);
-//     return;
-//   }
-//   const fileString = data.toString();
-//   console.log(fileString);
-// });
-
 const main = (config: ValidatorConfig) => {
   fs.readFile("./tests/TS202211.CSV", (err, data) => {
     if (err) throw err;
@@ -232,6 +223,8 @@ const main = (config: ValidatorConfig) => {
       .catch(console.error);
   });
 };
+
+// run the main function
 
 try {
   main(config);
